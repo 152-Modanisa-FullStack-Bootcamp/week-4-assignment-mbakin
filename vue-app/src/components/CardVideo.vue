@@ -1,13 +1,17 @@
 <template>
-<h1>Video Card component</h1>
+  <div id="card-video">
+    <img :src="video.coverImage" :alt="video.title">
+  </div>
 </template>
 
 <script>
 export default {
-  name: "CardVideo"
+  name: "CardVideo",
+  props: {
+    video: Object
+  }
 }
 </script>
 
 <style scoped>
-
 </style>
