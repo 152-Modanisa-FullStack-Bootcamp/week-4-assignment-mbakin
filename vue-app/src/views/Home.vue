@@ -1,17 +1,23 @@
 <template>
   <div class="home">
-    <CardVideo></CardVideo>
+    <card-video
+      v-for="video in videos"
+      :key="video.id"
+      :video="video">
+    </card-video>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import CardVideo from "../components/CardVideo";
-
+import CardVideo from "../components/CardVideo"
+import {mapGetters} from "vuex"
 export default {
   name: 'Home',
   components: {
-    CardVideo,
+    CardVideo
+  },
+  computed: {
+    ...mapGetters({ videos: "getVideos" })
   }
 }
 </script>
