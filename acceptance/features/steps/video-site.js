@@ -8,3 +8,10 @@ Given("that User goes to Video Site Project's HomePage", async function () {
 When("page is loaded", async function () {
   await this.page.waitForTimeout(2000)
 });
+
+Then("User can see some of videos' title like", async function (array){
+  const selector = "card-video"
+  for (let [videoTitle] of array.rawTable) {
+    const desiredVideo = await this.page.$$eval(selector, videos => videos.find(video => video.querySelector("#title") === videoTitle))
+  }
+})
