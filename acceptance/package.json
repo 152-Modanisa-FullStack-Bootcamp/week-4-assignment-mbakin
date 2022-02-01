@@ -18,8 +18,9 @@
   },
   "puppeteerOptions": {
     "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true",
-    "PUPPETEER_EXECUTABLE_PATH": "/usr/local/bin/chromium",
+    "PUPPETEER_EXECUTABLE_PATH": "which chromium",
     "headless": false,
+    "ignoreHTTPSErrors" : true,
     "sloMo": 250,
     "defaultViewport": {
       "width": 1000,

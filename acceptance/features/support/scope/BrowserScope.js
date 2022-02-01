@@ -16,8 +16,8 @@ class BrowserScope {
     async init(){
         const defaultOptions = {
             args: ['--no-sandbox', '--disable-dev-shm-usage'], 
-            ignoreHTTPSErrors: true
-        }
+            ignoreHTTPSErrors: true,
+        };
         this.close();
 
         this.config = {...defaultOptions, ...puppeteerOptions, ...this.worldParameters};
