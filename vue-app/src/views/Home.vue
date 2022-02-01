@@ -18,6 +18,9 @@ export default {
   },
   computed: {
     ...mapGetters({ videos: "getVideos" })
+  },
+  created() {
+    this.$store.dispatch("loadVideos")
   }
 }
 </script>
